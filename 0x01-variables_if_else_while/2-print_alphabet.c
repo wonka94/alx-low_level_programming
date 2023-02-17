@@ -6,14 +6,14 @@
 *Return: 0.
 */
 
-int main()
+int main(void)
 {
 	char ch;
-	printf("The Alphabets from a to z are: \n");
+
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		putchar(ch);
 	}
 
-	return 0;
+	return (0);
 }
