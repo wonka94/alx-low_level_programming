@@ -1,23 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Print combinations
- * Return: 0
- */
+* main - Entry point
+* print combinations
+* Return: 0
+
 int main(void)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; i <= 9; i++)
+	for (int i = 0; i < 8; i++)
 	{
-		putchar('0' + i);
-		if (i != 8)
+		for (int j = i + 1; j < 9; j++)
 		{
+			putchar('0' + i);
+			putchar('0' + j);
 			putchar(',');
 			putchar(' ');
 		}
 	}
-	putchar('\n');
+
 	return (0);
 }
