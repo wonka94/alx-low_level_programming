@@ -4,6 +4,7 @@
 * main - Entry point
 * print combinations
 * Return: 0
+*/
 
 int main(void)
 {
