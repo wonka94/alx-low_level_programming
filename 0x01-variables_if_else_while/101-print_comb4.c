@@ -8,7 +8,7 @@
 
 int main()
 {
-	int i, j , k;
+	int i, j, k;
 
 	for (i = 0; i < 8; i++)
 	{
@@ -24,6 +24,10 @@ int main()
 				{
 					putchar(',');
 					putchar(' ');
+				}
+				else 
+				{
+					break;
 				}
 			}
 		}
