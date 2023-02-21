@@ -2,8 +2,8 @@
 
 /**
  * _islower - check if alphabet is lowercase
- * c - parameter
- * Return: 0
+ * @c - parameter to check
+ * Return: 1 if c is lowercase else 0
  */
 
 int _islower(int c)
