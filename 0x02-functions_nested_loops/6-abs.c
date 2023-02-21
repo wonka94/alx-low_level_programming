@@ -2,7 +2,7 @@
 
 /**
  * _abs - print absolute value of integer
- * @n: value to check 
+ * @n: value to check
  * Return: return absolute value
  */
 
