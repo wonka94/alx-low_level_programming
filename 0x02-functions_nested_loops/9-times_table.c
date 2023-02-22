@@ -16,17 +16,17 @@ void times_table(void)
 			result = i * j;
 			if (result > 9)
 			{
-				putchar ((result / 10) + '0');
-				putchar ((result % 10) + '0');
+				_putchar ((result / 10) + '0');
+				_putchar ((result % 10) + '0');
 			}
 			else
 			{
-				putchar((result%10) + '0');
+				_putchar((result%10) + '0');
 			}
 			if (j != 9)
 			{
-				putchar(',');
-				putchar(' ');
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
 	}
