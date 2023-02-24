@@ -2,15 +2,14 @@
 
 /**
  * _isupper - define if a character is uppercase
- *
- * Description: Prints the alphabet with _putchar
- * @c: charater
+ * isupper - checks if alphabet is ippercase
+ * @c: charater to check
  * Return: void
  */
 
 int _isupper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (isupper(c))
 		return (1);
 	else
 		return (0);
