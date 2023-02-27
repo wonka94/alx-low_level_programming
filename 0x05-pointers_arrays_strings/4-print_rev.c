@@ -3,7 +3,7 @@
 /**
  * print_rev - prints a string in reverse order
  * @s: A pointer to string to be reversed
- * Return: 0
+ * Return: void
  */
 
 void print_rev(char *s)
@@ -22,6 +22,4 @@ void print_rev(char *s)
 	}
 
 	_putchar ('\n');
-
-	return (0);
 }
