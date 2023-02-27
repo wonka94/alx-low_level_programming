@@ -5,6 +5,7 @@
  * @s: Pointer to string to convert
  * Return: Return the num
  */
+
 int _atoi(char *s)
 {
 	unsigned int number, i;
@@ -29,5 +30,5 @@ int _atoi(char *s)
 
 	}
 
-	return (number *sign);
+	return (number * sign);
 }
