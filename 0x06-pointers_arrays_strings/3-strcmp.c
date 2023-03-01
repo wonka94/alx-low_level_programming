@@ -1,51 +1,25 @@
 #include "main.h"
 
 /**
- * infinite_add - adds two numbers
- * @n1: first number
- * @n2: second number
- * @r: buffer for result
- * @size_r: buffer size
+ * _strcmp - compares two strings.
+ * @s1: pointer to first string.
+ * @s2: pointer to second string.
  *
- * Return: address of r or 0
+ * Return: value less than 0 if string is less than the other.
+ * value greater than 0 if string is greater than the other.
+ * 0 if strings are equal.
  */
 
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+int _strcmp(char *s1, char *s2)
 {
-	int i, j, k, l, m, n;
-	for (i = 0; n1[i]; i++)
+	int counter, cmpVal;
+
+	counter = 0;
+	while (s1[counter] == s2[counter] && s1[counter] != '\0')
 	{
-		for (j = 0; n2[j]; j++)
-		{
-			if (i > size_r || j > size_r)
-			{
-				return (0);
-			}
-			m = 0;
-			for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
-			{
-				n = m;
-				if (i >= 0)
-				n += n1[i] - '0';
-				if (j >= 0)
-					n += n2[j] - '0';
-				if (i < 0 && j < 0 && n == 0)
-				{
-					break;
-				}
-				m = n / 10;
-				r[k] = n % 10 + '0';
-			}
-			r[k] = '\0';
-			if (i >= 0 || j >= 0 || m)
-				return (0);
-			for (k -= 1, l = 0; l < k; k--, l++)
-			{
-				m = r[k];
-				r[k] = r[l];
-				r[l] = m;
-			}
-		}
+		counter++;
 	}
-	return (r);
+
+	cmpVal = s1[counter] - s2[counter];
+	return (cmpVal);
 }
