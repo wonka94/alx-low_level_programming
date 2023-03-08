@@ -1,35 +1,14 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * wildcmp - is a fuction that compares two strings.
+ * _strlen_recursion - returns the length of a string
+ * @s: string to calculate the length of
  *
- * @s1: is a pointer to char.
- * @s2: is a pointer to char.
- *
- * Return: Returns the transformed pointer.
-**/
-
-int wildcmp(char *s1, char *s2)
+ * Return: length of the string
+ */
+int _strlen_recursion(char *s)
 {
-	if (*s1 == '\0' && *s2 == '\0')
-	{
-		return (1);
-	}
-	else if (*s1 == *s2)
-	{
-		return (wildcmp(s1 + 1, s2 + 1));
-	}
-	if (*s2 == '*')
-	{
-		if (*(s2 + 1) == '*')
-		{
-			return (wildcmp(s1, s2 + 1));
-		}
-		else if (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1))
-		{
-			return (1);
-		}
-	}
-	return (0);
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
 }
