@@ -1,14 +1,12 @@
 #include "main.h"
-
 /**
- * *_strspn - gets the length of a prefix substring
- * @s: string to evaluate
- * @accept: string containing the list of characters to match in s
+ * _isupper - checks if the letters are uppercase
+ *  @c: input.
  *
- * Return: the number of bytes in the initial segment
- * of s which consist only of bytes from accept
+ *  Return: 1 if c is uppercase
+ *  0 otherwise.
  */
-unsigned int _strspn(char *s, char *accept)
+int _isupper(int c)
 {
 	if ((c >= 'A') && (c <= 'Z'))
 	{
