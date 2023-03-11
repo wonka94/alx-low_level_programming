@@ -6,7 +6,7 @@
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: Always 0 (Success)
+ * Return: 1 if error else return 0
  */
 
 int main(int argc, char *argv[])
@@ -20,11 +20,13 @@ int main(int argc, char *argv[])
 			j *= atoi(argv[i]);		
 		}
 	printf("%d\n", j);
+
+	return (0);
 	}
 	else
 	{
 		printf("Error\n");
-	}
 
-	return (0);
+		return (1);
+	}
 }
