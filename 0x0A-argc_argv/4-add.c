@@ -57,40 +57,31 @@ int _atoi(char *s)
 
 int main(int argc, char *argv[])
 {
-	int i, j;
-	bool nan = false;
+	int sum, num, i, j, k;
 
-	if (argc > 1)
+	sum = 0;
+
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (_atoi(argv[i]) == 0)
+			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
-				nan = true;
+				puts("Error");
+				return (1);
 			}
-			else
-			{
-				j += _atoi(argv[i]);
-			}
-
-		}
-
-		if (nan == false)
-		{
-			printf("%d\n", j);
-
-			return (0);
-		}
-		else
-		{
-			printf("Error\n");
-
-			return (1);
 		}
 	}
-	else
-	{
-		printf("0\n");
 
+	for (k = 1; k < argc; k++)
+	{
+		num = _atoi(argv[k]);
+		if (num >= 0)
+		{
+			sum += num;
+		}
 	}
+
+	printf("%d\n", sum);
+	return (0);
 }
