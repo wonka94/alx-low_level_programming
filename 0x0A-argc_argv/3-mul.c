@@ -56,13 +56,13 @@ int _atoi(char *s)
 
 int main(int argc, char *argv[])
 {
-	int i, j = 1;
+	int i, j;
 
 	if (argc > 2)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			j *= _atoi(argv[i]);		
+			j = 1 * _atoi(argv[i]);
 		}
 	printf("%d\n", j);
 
