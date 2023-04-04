@@ -5,7 +5,6 @@
  * given index of a listint_t list.
  * @head: Pointer to the first element in the list.
  * @index: The index of the node to be deleted.
- *
  * Return: 1 (Success), or -1 (Fail)
  */
 
@@ -15,7 +14,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *head_copy = *head;
 	unsigned int i;
 
-	if (*head == NULL)
+	if (*head == NULL || *head->next == NULL)
 	{
 		return (-1);
 	}
