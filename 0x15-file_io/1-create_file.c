@@ -9,7 +9,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int dailog, file_write, length = 0;
+	int dialog, file_write, length = 0;
 
 	if (!filename)
 	{
@@ -18,24 +18,27 @@ int create_file(const char *filename, char *text_content)
 
 	dialog = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 	
-	if (dailog < 0)
+	if (dialog == -1)
 	{
 		return (-1);
 	}
 
-	while (text_content && *(text_content + length))
+	if (text_content)
 	{
-		length++;
-	}
+		while (text_content[length])
+		{
+			length++;
+		}
 
-	file_write = write(dailog, text_content, length);
+		file_write = write(dialog, text_content, length);
+
+		if (file_write < 0)
+		{
+			return (-1);
+		}
+	}
 
 	close(dialog);
-
-	if (file_write < 0)
-	{
-		return (-1);
-	}
 
 	return (1);
 }
