@@ -1,14 +1,12 @@
-include "main.h"
+#include "main.h"
 
 /**
- * _isalpha - check if a character is an alphabet
- * @c: character to be checked
- *
- * Return: 1 if c is a alphabet, 0 otherwise
+ * _abs - absolute value of parameter
+ * 
+ * @n: number to compute absolute value 
+ * Return: absolute value of n 
  */
-int _isalpha(int c)
+int _abs(int n)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	return n < 0 ? -n : n;
 }
