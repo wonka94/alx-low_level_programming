@@ -1,12 +1,12 @@
 #include "hash_tables.h"
 
 /**
- * delete_hash_table - deletes a hash table
+ * hash_table_delete - deletes a hash table
  * @ht: pointer to the hash table
  *
  * Return: void
  */
-void delete_hash_table(hash_table_t *ht)
+void hash_table_delete(hash_table_t *ht)
 {
 	hash_table_t *table = ht;
 	hash_node_t *current_node, *temp_node;
